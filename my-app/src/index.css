@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0b2b3d;
+  background: #f7f8f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+::selection { background: #ffcdaf; color: #0b2b3d; }
+
+/* Contraste garantido para os botões de ação do projeto. */
+.botao-primario {
+  background: #0b2b3d !important;
+  color: #ffffff !important;
+  border: 1px solid #0b2b3d;
+}
+.botao-primario:hover { background: #174b5d !important; }
+.botao-destaque {
+  background: #ff8b63 !important;
+  color: #092637 !important;
+  border: 1px solid #ff8b63;
+}
+.botao-destaque:hover { background: #ffa480 !important; }
+.botao-secundario {
+  background: #ffffff !important;
+  color: #0b2b3d !important;
+  border: 1px solid #a6c9c2;
+}
+.botao-secundario:hover { background: #e8f5f0 !important; }
+.botao-primario:focus-visible,
+.botao-destaque:focus-visible,
+.botao-secundario:focus-visible {
+  outline: 3px solid #00bca9;
+  outline-offset: 3px;
+}
+
+/* Marcas visuais inspiradas em faixas e pisos de travessia. */
+.padrao-calcada {
+  background-image: linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.padrao-piso {
+  background-image: linear-gradient(90deg, rgba(11,43,61,.06) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(11,43,61,.06) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
